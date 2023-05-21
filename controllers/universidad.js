@@ -80,50 +80,7 @@ const getUniversidades = async (req = request,
     }
 }
 
-
-//Buscar marca por estado:
-
-/*   const getMarcaEstado = async (req = request, res = response) => {
-    try{
-        const { estado } = req.query;
-
-
-        const marcaDB = await Marca.find({estado})
-
-        if(!marcaDB) return res.json({msg: 'No hay datos'})
-        return res.json(marcaDB)
-    }catch(e){
-        return res.status(500).json({
-            msg: e
-        })
-    }
-}
-
-//Eliminar marca
-
-const deleteMarca = async ( req = request, res = response) => {
-    try{
-        const { id } = req.query
-
-        const marcaDB = await Marca.findById(id)
-
-        if(marcaDB){
-            const marcaDBfound = await Marca.findByIdAndDelete(id)
-            return res.json({msg: 'La marca fue eliminado con exito'})
-        }
-        if(!marcaDB){
-            return res.json({msg: 'No existe ese id'})
-        } 
-        
-
-    }catch(e){
-        return res.status(500).json({
-            msg: e
-        })
-    }
-}  */
-
-module.exports = {createUniversidad,getUniversidades,updateUniversidad /* getMarcaEstado, , deleteMarca */ }
+module.exports = {createUniversidad,getUniversidades,updateUniversidad }
 
 
 

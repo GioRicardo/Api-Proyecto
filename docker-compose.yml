@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  api-proyecto:
+    container_name: api-proyecto
+    image: api-proyecto:v1
+    build: 
+      context: .
+    ports:
+      - "4003:4003"
+    networks:
+      - api-red 
+networks:
+  api-red:
