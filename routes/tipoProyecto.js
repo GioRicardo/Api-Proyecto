@@ -1,4 +1,5 @@
 const { Router } = require('express')
+
 const { createTipoProyecto, updateTipoProyecto, getTipoProyectos} = require('../controllers/tipoProyecto')
 
 

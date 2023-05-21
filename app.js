@@ -13,7 +13,8 @@ app.use(express.json())
 const etapa = require('./routes/etapa')
 const tipoProyecto = require('./routes/tipoProyecto')
 const cliente = require('./routes/cliente')
-const universidad = require('./models/universidad')
+const universidad = require('./routes/universidad')
+
 
 
 // URI o endpoint
@@ -22,6 +23,7 @@ app.use('/api/etapas', etapa)
 app.use('/api/tipoproyectos', tipoProyecto)
 app.use('/api/clientes', cliente)
 app.use('/api/universidades', universidad)
+
 
 module.exports = app
 

@@ -11,6 +11,9 @@ const createUniversidad = async (req = request,
         const nombre = req.body.nombre
         const direccion = req.body.direccion
         const telefono = req.body.telefono
+
+        console.log(telefono) 
+
         ? req.body.nombre.toUpperCase()
         : ''
         ? req.body.direccion.toUpperCase()

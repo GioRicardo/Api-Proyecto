@@ -1,5 +1,7 @@
 const { Router } = require('express')
+
 const { createUniversidad, updateUniversidad, getUniversidades} = require('../controllers/universidad')
+
 
 
 const router = Router()
