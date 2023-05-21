@@ -1,6 +1,5 @@
 const { Router } = require('express')
-const { createUniversidad, getUniversidad,updateUniversidad, /* getMarcaEstado, , deleteMarca */ 
-getUniversidades} = require('../controllers/universidad')
+const { createUniversidad, updateUniversidad, /* getMarcaEstado, , deleteMarca */ getUniversidades} = require('../controllers/universidad')
 
 
 const router = Router()

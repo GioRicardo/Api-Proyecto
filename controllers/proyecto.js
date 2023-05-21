@@ -16,7 +16,7 @@ const createProyecto= async (req = request,
         //validando cliente
         const clienteDB = await Cliente.findOne({
             _id: cliente._id,
-            estado: true
+            // estado: true
         })
 
         console.log("cliente:", clienteDB)
@@ -27,7 +27,7 @@ const createProyecto= async (req = request,
         // validando universidad
         const universidadDB = await Universidad.findOne({
             _id: universidad._id,
-            estado: true
+            // estado: true
         })// select * from universidades where _id=? and estado=true
         if(!universidadDB){
             return res.status(400).json({msg: 'universidad invalida'})
@@ -39,7 +39,7 @@ const createProyecto= async (req = request,
         // validando tipo de proyecto
         const tipoProyectoDB = await TipoProyecto.findOne({
             _id: tipoProyecto._id,
-            estado: true
+            // estado: true
         })// select * from estados where _id=? and estado=true
 
         if(!tipoProyectoDB){
@@ -53,7 +53,7 @@ const createProyecto= async (req = request,
         
         const etapaDB = await Etapa.findOne({
             _id: etapa._id,
-            estado: true
+            // estado: true
         })// select * from etapas where _id=? and estado=true
         if(!etapaDB){
            return res.status(400).json({msg: 'etapa invalida'})
@@ -117,11 +117,10 @@ const updateProyecto = async ( req = request, res = response) => {
         //validando cliente
         const clienteDB = await Cliente.findOne({
             _id: cliente._id,
-            estado: true
+            // estado: true
         })
 
         console.log ("cliente: ", clienteDB)
-
 
         if(!clienteDB){
             return res.status(400).json({msg: 'cliente invalido'})
@@ -132,7 +131,7 @@ const updateProyecto = async ( req = request, res = response) => {
         // validando universidad
         const universidadDB = await Universidad.findOne({
             _id: universidad._id,
-            estado: true
+            // estado: true
         })
 
         console.log ("universidad: ", universidadDB)
@@ -146,7 +145,7 @@ const updateProyecto = async ( req = request, res = response) => {
         // validando tipo proyecto
         const tipoProyectoDB = await TipoProyecto.findOne({
             _id: tipoProyecto._id,
-            estado: true
+            // estado: true
         })
 
         console.log ("tipoProyecto", tipoProyectoDB)
@@ -160,7 +159,7 @@ const updateProyecto = async ( req = request, res = response) => {
         // validando etapa
         const etapaDB = await Etapa.findOne({
             _id: etapa._id,
-            estado: true
+            // estado: true
         })
 
         console.log ("etapa: ", etapaDB)
